@@ -1,13 +1,13 @@
 /*
-    Avoir une réponse du get /
+    Get a response from get /
 */
 
-const express = require('express');     // Importation de la librairie express
+const express = require('express');     // Importing the express library
 const app = express();
 const port = 8080;
 
 /*
-    Sortir une chanson random de Sinata
+    Play a random song by Sinata
 
     const frankSinatraSongs = [ "My Way", "Strangers in the Night", "Fly Me to the Moon", "New York, New York", "I've Got You Under My Skin",
   "The Way You Look Tonight", "Come Fly With Me", "That's Life", "Summer Wind", "Night and Day", "The Lady is a Tramp", "All the Way", "One for My Baby (And One More for the Road)",
@@ -29,7 +29,7 @@ function RandomSong() {
     return frankSinatraSongs[song_number];
 }
 
-app.get('/', (req, res) => {        // Définition d'une route -> invoquée si requête HTTP GET avec un chemin ('/'). La fonction de rappel = une requête et un objet réponse comme arguments, et appelle simplement send() sur la réponse pour renvoyer la chaîne.
+app.get('/', (req, res) => {        // Defining a route -> invoked if HTTP GET request with a path (‘/’). The callback function = a request and a response object as arguments, and simply calls send() on the response to return the string.
     console.log("From the /");
     res.send(RandomSong());
 })
@@ -61,7 +61,7 @@ app.get('/public', (req,res) => {
 
 app.get('/protected', (req, res) => {
     /*
-    Vérifier que le req.headers.authorization existe bien, qu'il est envoyé avant de faire le split    
+    Check that req.headers.authorization exists and is sent before performing the split    
     */
     const auth = req.get("authorization");
     console.log("Autorisation réussi :", auth);
@@ -96,6 +96,6 @@ app.get('/protected', (req, res) => {
 })
 
 
-app.listen(port, () => {       // Démarre le serveur sur le port. On peut aller dans nav : localhost:port et voir la rep envoyé.
+app.listen(port, () => {       // Start the server on the port. You can go to nav: localhost:port and see the response sent.
     console.log(`Server started, port ${port}`);
 })
