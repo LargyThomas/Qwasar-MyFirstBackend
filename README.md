@@ -2,37 +2,34 @@
 ***
 
 ## Task
-What is the problem? And where is the challenge?
-Je dois réaliser une app backend, qui va permettre à l'utilisateur de réaliser différentes actions.
+I need to develop a backend app that will allow users to perform various actions.
+
 ## Description
-How have you solved the problem?
-Il va y avoir plusieurs chemin d'accès ou route vers les demandes de l'utilisateur. Chacune des routes se porte sur Frank Sinatra, sauf deux qui seront basé sur l'accès public ou protégé.
+There will be several paths or routes to user requests. Each of the routes will be based on Frank Sinatra, except for two that will be based on public or protected access.
+
 ## Installation
-How to install your project? npm install? make? make re?
-J'ai créé un fichier : app.js grâce à doctype. Il s'utilise avec node.js.
+I created a file: app.js using doctype. It is used with node.js.
+
 ## Usage
-How does it work?
-```
-Le fichier se sépare en trois grandes parties avec la première sur l'initialisation, la deuxième sur les différentes routes qui porte sur Frank Sinatra,
-et la dernière qui va gérer la route /protected.
+The file is divided into three main parts, with the first part dealing with initialization, the second part dealing with the various routes related to Frank Sinatra,
+and the last part managing the /protected route.
 
-Dans la première partie j'importe la librairie ou framework express puis je défini le port et enfin je faire en sorte que le serveur "écoute" lorsque je lance dans 
-le teminal la requête : node app.js.
+In the first part, I import the Express library or framework, then I define the port, and finally I make sure that the server “listens” when I launch 
+the request in the terminal: node app.js.
 
-Dans la seconde partie je vais gérer les différentes informations sur Frank Sinatra grâce à plusieurs routes, comme demandé dans la consigne. Les routes sont pour 
-sa date d'anniversaire, le lieu de naissance, les différentes femmes qu'il a eu, une image de la personne et enfin la dernière qui va donner un song qu'il a rélisé.
-À chaque fois je répète la même méthode qui est de vérifier si une requête HTTP GET à été réalisé et de savoir laquelle. Ensuite j'affiche dans la console le chemin
-de la requête et je renvoi la réponse qui est attendu. Pour le song random je vais utilisé deux fonction qui vont e permettre d'avoir une valeur random et grâce à elle 
-je vais chercher la chanson associé à l'indice de ma liste de 20 chansons.
+In the second part, I manage the various pieces of information about Frank Sinatra using several routes, as requested in the instructions. The routes are for 
+his birthday, place of birth, the different women he had relationships with, an image of the person, and finally the last one, which gives a song he recorded.
+Each time, I repeat the same method, which is to check if an HTTP GET request has been made and to find out which one. Then I display the path
+of the request in the console and return the expected response. For the random song, I will use two functions that will allow me to get a random value, and thanks to this value, 
+I will search for the song associated with the index of my list of 20 songs.
 
-Dans la dernière partie je vais vérifier si l'utilise possède la bon username et password afin d'accèder à la version "protégée" et de s'authentifier. Pour cela je récupère l'authorisation de
-la requête envoyé par le client. Je convertis l'encodage en base 64 et je le remet en string. Je vais pouvoir extraire le username et password et il me restera juste à vérifier si
-c'est ce que l'on attend ou non. Si oui l'utilisateur pourra être authentifier, si non la réponse sera "non autorisé". 
-Pour la partie "public" je fais exactement la même chose que pour les infos sur Frank Sinatra.
-```
+In the last part, I will check whether the user has the correct username and password in order to access the “protected” version and authenticate themselves. To do this, I retrieve the authorization from
+the request sent by the client. I convert the encoding to base 64 and put it back into a string. I will be able to extract the username and password, and then I just need to check whether
+they are what we expect or not. If so, the user can be authenticated; if not, the response will be “not authorized.” 
+
+For the “public” section, I do exactly the same thing as for the information about Frank Sinatra.
 
 ### The Core Team
 
 
 <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
-<span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' /></span>
